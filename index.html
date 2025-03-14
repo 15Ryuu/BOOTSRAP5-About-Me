@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me, Myself and I</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --pink-light: #FFE0F0;
+            --pink-medium: #FFB6C1;
+            --pink-dark: #FF69B4;
+            --text-color: #4A4A4A;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #FFFFFF;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            color: var(--pink-dark);
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            margin: 0 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--pink-dark);
+        }
+        
+        .hero {
+            background-color: var(--pink-light);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .btn-primary {
+            background-color: var(--pink-dark);
+            border-color: var(--pink-dark);
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ff45a0;
+            border-color: #ff45a0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 40px;
+            height: 3px;
+            background-color: var(--pink-medium);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            color: var(--pink-dark);
+            font-weight: 600;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: var(--pink-light);
+            color: var(--pink-dark);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--pink-dark);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-item img {
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .testimonial {
+            background-color: var(--pink-light);
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--pink-dark);
+        }
+        
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Me, Myself & I</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">SNS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Madi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Hello, I'm <span style="color: var(--pink-dark);">Madeline</span></h1>
+                    <p>Hi, I'm Madeline Andrada Bongcac. Welcome to my personal space where I share my journey.</p>
+                    <a href="#about" class="btn btn-primary">More About Me!</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="\Users\mad22\Downloads\Bongcac,Madeline A. (2).jpg" class="img-fluid rounded-circle" alt="Profile Photo" style="max-width: 230px; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>I'm an IT student with a strong foundation in programming and a passion for continuous learning. While I know the basics of coding, I’m always looking to improve and expand my skills.
+
+                        Apart from tech, I have a keen eye for editing—whether it’s graphics, videos, or content creation. I also enjoy affiliating and exploring ways to connect with different brands and opportunities.</p>
+                    <p>I believe in growth and self-improvement, so I’m constantly enhancing my knowledge and skills in various fields. Despite my curiosity for learning, I’m very much a home person—I find comfort in simple things, personal space, and quality time with those who matter.
+
+                        I’m thrilled about where my journey will take me, and I’m always open to new experiences and challenges!</p>
+                    <div class="mt-4">
+                        <h5>Things I Love</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li>✦ Cats ≽^•⩊•^≼ </li>
+                                    <li>✦ Minimalist Design 𐙚</li>
+                                    <li>✦ Coffee ☕︎</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li>✦ Reading 🗃</li>
+                                    <li>✦ Color Pink ˚⋆ </li>
+                                    <li>✦ Sleeping ᶻ 𝗓 𐰁ᶻ 𝗓 𐰁</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">More About Me</h5>
+                            <div class="mb-3">
+                                <span style="display: inline-block; width: 100px;">Nickname:</span>
+                                <span>Madi or Madz</span>
+                            </div>
+                            <div class="mb-3">
+                                <span style="display: inline-block; width: 100px;">Birthday:</span>
+                                <span>  April 22, 2004</span>
+                            </div>
+                            <div class="mb-3">
+                                <span style="display: inline-block; width: 100px;">Location:</span>
+                                <span>Taguig City, Philippines</span>
+                            </div>
+                            <div class="mb-3">
+                                <span style="display: inline-block; width: 100px;">Email:</span>
+                                <span>secretmadzbarbie143@gmail.com</span>
+                            </div>
+                            <div class="social-icons mt-4">
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-pinterest"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section" style="background-color: #fafafa;">
+        <div class="container">
+            <h2 class="section-title">My SNS</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="\Users\mad22\Downloads\BOOTSTRAP 5\0001.jpg" alt="Portfolio 1" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="\Users\mad22\Downloads\BOOTSTRAP 5\0002.jpg" alt="Portfolio 2" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="\Users\mad22\Downloads\BOOTSTRAP 5\0003.jpg" alt="Portfolio 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Personal Attributes</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Interests & Hobbies</h5>
+                            <p class="text-muted">March 10, 2025</p>
+                            <p class="card-text">I enjoy gaming, reading, scrolling through social media, and sleeping. My favorite music artists include Sofia Carson, Dove Cameron, IU, Taylor Swift, and Sabrina Carpenter. I love watching The Vampire Diaries, all Barbie movies, and Disney films. When it comes to books, I’m drawn to anything fantasy or magical. ✨📚🎮</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Skills & Strength</h5>
+                            <p class="text-muted">February 25, 2025</p>
+                            <p class="card-text">I have experience with programming languages such as HTML, CSS, Python, and JavaScript. In addition to my technical skills, I excel in communication, problem-solving, and leadership. Beyond coding, I also have a passion for art, crafts, and makeup. 😊</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Goals & Aspirations</h5>
+                            <p class="text-muted">February 10, 2025</p>
+                            <p class="card-text">I want to improve my coding skills. I aspire to have a good life. One of my dream destinations is Italy, and someday, I hope to visit. Something unique about me is that I enjoy collecting different kinds of phone casings.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="contact" class="section">
+    <section class="section" style="background-color: #fafafa;">
+        <div class="container">
+            <h2 class="section-title">My Quotes or Motto</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial">
+                        <p class="testimonial-quote">"Suffer Now, Enjoy Later".- Quit Procrastination -</p>
+                        <p class="testimonial-author">— Madi</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial">
+                        <p class="testimonial-quote">"Eudaimonia". - To have a good life - </p>
+                        <p class="testimonial-author">— Madi</p>
+                    
+             
